@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tracking - JelanTech</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gradient-yellow">
+    <nav class="nav-auth">
+      <div class="nav-container">
+        <div class="nav-left"><h1 class="brand-logo">JelanTech</h1></div>
+        <div class="nav-right">
+          <a href="home-auth.html" class="nav-link">Home</a>
+          <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+          <a href="service.html" class="nav-link active">Our Service</a>
+          <div class="profile-wrapper">
+            <div class="profile-icon" id="profile-trigger">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="profile-dropdown" id="profile-menu">
+              <a href="profile.html"
+                ><i class="fa-solid fa-id-card"></i> My Profile</a
+              >
+              <hr />
+              <a href="login.html" class="logout-item"
+                ><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a
+              >
+            </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="service-header white-bg">
+      <div class="header-content">
+        <a href="service.html" class="back-link">
+          <i class="fa-solid fa-chevron-left"></i>
+          <h1 class="service-title inline-title">Tracking my Oil</h1>
+        </a>
+        <p class="service-subtitle shift-right">
+          Monitor your cooking oil pickup status and history.
+        </p>
+      </div>
+    </header>
+
+    <main class="tracking-container">
+      <div class="card-white tracking-card">
+        <h2 class="section-title">On going Pick-Up</h2>
+
+        <div class="table-responsive">
+          <table class="tracking-table">
+            <thead>
+              <tr>
+                <th>Batch</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Pickup Time</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#6</td>
+                <td>6075 ml</td>
+                <td>5-10 L</td>
+                <td>15/4/2026</td>
+                <td>8.00 AM</td>
+                <td class="status-otw">Driver is OTW</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="map-wrapper">
+          <div class="map-container-active">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15806.01524317616!2d112.597654!3d-7.946764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+              width="100%"
+              height="250"
+              style="border: 0; border-radius: 15px"
+              allowfullscreen=""
+              loading="lazy"
+            >
+            </iframe>
+            <div class="map-overlay-info">
+              <i class="fa-solid fa-truck-moving"></i> Arriving in 5 mins
+            </div>
+          </div>
+        </div>
+
+        <p class="points-info">
+          You will earn 56 Points after this order is completed.
+        </p>
+      </div>
+
+      <div class="history-section">
+        <h2 class="history-heading">Pick-Up History</h2>
+
+        <div class="history-group">
+          <span class="badge-history">Weekly Pick-Up</span>
+
+          <div class="card-white mini-card">
+            <h3>Upcoming Scheduled Pick-Up</h3>
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th>Batch</th>
+                  <th>Category</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#6</td>
+                  <td>5-10 L</td>
+                  <td>15/4/2026</td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="action-buttons">
+              <button class="btn-edit">Edit Schedule</button>
+              <button class="btn-cancel">Cancel</button>
+            </div>
+          </div>
+
+          <div class="card-white mini-card">
+            <h3>Weekly Pick-Up History</h3>
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th>Batch</th>
+                  <th>Amount</th>
+                  <th>Category</th>
+                  <th>Date</th>
+                  <th>Points</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#5</td>
+                  <td>6075 ml</td>
+                  <td>5-10 L</td>
+                  <td>15/4/2026</td>
+                  <td>56</td>
+                </tr>
+                <tr>
+                  <td>#4</td>
+                  <td>11985 ml</td>
+                  <td>>10 L</td>
+                  <td>6/3/2026</td>
+                  <td>256</td>
+                </tr>
+                <tr>
+                  <td>#3</td>
+                  <td>3600 ml</td>
+                  <td>2-4 L</td>
+                  <td>10/2/2026</td>
+                  <td>32</td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="#" class="view-all">View All ></a>
+          </div>
+        </div>
+
+        <div class="history-group">
+          <span class="badge-history">One-Time Pick-Up</span>
+          <div class="card-white mini-card">
+            <h3>History</h3>
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th>Batch</th>
+                  <th>Amount</th>
+                  <th>Category</th>
+                  <th>Date</th>
+                  <th>Points</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#5</td>
+                  <td>6075 ml</td>
+                  <td>5-10 L</td>
+                  <td>15/4/2026</td>
+                  <td>56</td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="#" class="view-all">View All ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-action">
+        <p>Want to trade your points? Check your points now!</p>
+        <button
+          class="btn-check-points"
+          onclick="window.location.href = 'leaderboard.html'"
+        >
+          Check My Points
+        </button>
+      </div>
+    </main>
+        <script src="script.js"></script>
+  </body>
+</html>

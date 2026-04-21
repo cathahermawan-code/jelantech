@@ -1,0 +1,1693 @@
+/* --- VARIABLE WARNA --- */
+:root {
+  --primary-green: #89a45e;
+  --light-yellow: #fdf2a5;
+  --dark-yellow: #e5d886;
+  --accent-red: #c05c67;
+  --text-dark: #4a4a4a;
+  --text-muted: #7a7a7a;
+}
+
+/* --- RESET DEFAULT --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* --- NAVIGASI GUEST (Landing, Login, Register) --- */
+.nav-guest {
+  background-color: var(--primary-green);
+  padding: 15px 5%;
+  display: flex;
+  justify-content: flex-end;
+  /* Semua menu menempel ke kanan */
+}
+
+/* --- NAVIGASI AUTH (Leaderboard & Home Setelah Login) --- */
+.nav-auth {
+  background-color: var(--primary-green);
+  padding: 10px 5%;
+  width: 100%;
+}
+
+.nav-auth .nav-container {
+  display: flex;
+  justify-content: space-between;
+  /* Title ke kiri, Menu ke kanan */
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.brand-logo {
+  font-family: 'Dancing Script', cursive;
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+/* --- STYLE MENU (Berlaku untuk keduanya) --- */
+.nav-menu,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 18px;
+  transition: 0.3s;
+}
+
+.nav-link.active {
+  background-color: var(--accent-red);
+  border-radius: 20px;
+}
+
+.profile-icon {
+  background-color: white;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-green);
+  margin-left: 10px;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  display: flex;
+  min-height: 80vh;
+  flex-wrap: wrap;
+}
+
+.hero-left {
+  flex: 1;
+  background-color: var(--light-yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  min-width: 350px;
+}
+
+.hero-content h2 {
+  font-size: 2.2rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.brand-name {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5.5rem;
+  color: var(--accent-red);
+  margin-top: -10px;
+}
+
+.hero-right {
+  flex: 1;
+  background-color: var(--dark-yellow);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* Mascot berdiri di bawah */
+  min-width: 350px;
+  overflow: hidden;
+}
+
+/* Efek Segitiga di Background Kanan */
+.hero-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-green);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  opacity: 0.3;
+}
+
+.mascot-img {
+  width: 300px;
+  z-index: 2;
+  margin-bottom: 40px;
+}
+
+/* --- ABOUT SECTION --- */
+.about {
+  padding: 80px 15%;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: #b5b5b5;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  color: var(--primary-green);
+  font-weight: 700;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-align: justify;
+  color: #555;
+}
+
+/* --- CTA SECTION --- */
+.cta {
+  background-color: var(--light-yellow);
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 2.2rem;
+  color: #5d7539;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.cta-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cta-text {
+  flex: 1;
+  min-width: 250px;
+  font-size: 1.6rem;
+  color: #8b733a;
+  text-align: left;
+  font-weight: 600;
+}
+
+.cta-image img {
+  width: 180px;
+}
+
+.btn-join {
+  background-color: var(--accent-red);
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 40px;
+  transition: 0.3s;
+}
+
+.btn-join:hover {
+  background-color: #a84b55;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+  .brand-name {
+    font-size: 4rem;
+  }
+
+  .hero-right {
+    height: 400px;
+  }
+
+  .about {
+    padding: 50px 8%;
+  }
+
+  .cta-text {
+    text-align: center;
+  }
+}
+
+/* --- LOGIN PAGE STYLES --- */
+.bg-yellow {
+  background-color: var(--light-yellow);
+  min-height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.login-card {
+  background-color: var(--primary-green);
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h1 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.input-group {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.input-group i {
+  color: #888;
+  margin-right: 10px;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  margin-bottom: 25px;
+}
+
+.remember-me input {
+  cursor: pointer;
+}
+
+.login-links {
+  font-size: 0.8rem;
+  margin-bottom: 30px;
+}
+
+.login-links p {
+  margin-bottom: 5px;
+}
+
+.login-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+.btn-login {
+  background-color: var(--accent-red);
+  color: white;
+  border: none;
+  width: 60%;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+
+.btn-login:hover {
+  background-color: #a84b55;
+}
+
+.brand-name-small {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+/* Responsivitas Tambahan */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 30px 20px;
+  }
+}
+
+/* Tambahkan ini di bagian bawah style.css */
+
+.register-title {
+  font-size: 1.8rem !important;
+  /* Ukuran sedikit lebih kecil agar muat */
+  margin-bottom: 30px !important;
+  line-height: 1.2;
+}
+
+/* Memastikan form memiliki jarak yang pas */
+#registerForm {
+  margin-top: 10px;
+}
+
+/* Memperhalus tampilan link 'here' */
+.login-links a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.login-links a:hover {
+  border-bottom: 1px solid white;
+}
+
+/* --- LEADERBOARD SPECIFIC --- */
+.bg-gradient-yellow {
+  background: linear-gradient(180deg, #fdf2a5 0%, #ffe884 100%);
+  min-height: 100vh;
+}
+
+.nav-brand {
+  font-family: 'Dancing Script', cursive;
+  color: white;
+  font-size: 2rem;
+}
+
+.nav-container-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-icon {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-green);
+  margin-left: 10px;
+}
+
+.leaderboard-section {
+  padding: 60px 10%;
+}
+
+.title-main {
+  font-size: 3rem;
+  color: #5d7539;
+  font-weight: 700;
+}
+
+.title-main span {
+  font-family: 'Dancing Script', cursive;
+  color: var(--accent-red);
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+.description {
+  max-width: 800px;
+  margin: 20px 0 40px 0;
+  color: #4a4a4a;
+}
+
+/* Tabel Leaderboard */
+.leaderboard-card {
+  background-color: #5d7539;
+  /* Hijau Tua */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+
+.leaderboard-table th {
+  color: white;
+  text-align: left;
+  padding: 0 15px;
+  font-size: 1.2rem;
+}
+
+.leaderboard-table th:last-child {
+  text-align: right;
+}
+
+.leaderboard-table td {
+  background-color: white;
+  padding: 12px 20px;
+}
+
+.leaderboard-table td:first-child {
+  border-radius: 12px 0 0 12px;
+}
+
+.leaderboard-table td:last-child {
+  border-radius: 0 12px 12px 0;
+  text-align: right;
+  font-weight: 600;
+}
+
+.rank-num {
+  width: 60px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.user-name {
+  width: 200px;
+  font-weight: 600;
+}
+
+/* Progress Bar */
+.progress-container {
+  background-color: #eee;
+  height: 35px;
+  border-radius: 20px;
+  position: relative;
+  overflow: visible;
+  width: 100%;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #fdf2a5, #e6a73c);
+  height: 100%;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.star-icon {
+  color: #d48b1d;
+  font-size: 1.5rem;
+  position: absolute;
+  right: -10px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Gaya khusus bar untuk baris "You" */
+.current-user-row td {
+  background-color: #d1d8c1;
+  /* Sedikit berbeda untuk membedakan 'You' */
+}
+
+.user-progress {
+  background: linear-gradient(90deg, #e5d886, #b8860b);
+}
+
+
+/* --- TAMBAHAN UNTUK HOME AUTH --- */
+
+/* Tombol Start to Send */
+.btn-start {
+  background-color: var(--accent-red);
+  color: white;
+  border: none;
+  padding: 12px 45px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: 0.3s;
+}
+
+.btn-start:hover {
+  background-color: #a84b55;
+  transform: scale(1.05);
+}
+
+/* Floating Action Button (Icon Kaca Pembesar/Pesan di pojok kanan bawah) */
+.floating-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--accent-red);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.floating-btn:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Penyesuaian Brand Name di Hero */
+.brand-name-hero {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5.5rem;
+  color: var(--accent-red);
+  margin-top: -10px;
+}
+
+/* Memastikan teks di CTA home-auth lebih kecil sikit agar rapi */
+.cta-text p {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  font-weight: 400;
+}
+
+
+
+/* --- OUR SERVICE STYLES --- */
+
+.service-header {
+  background-color: white;
+  padding: 60px 10%;
+  text-align: left;
+}
+
+.service-title {
+  color: #c05c67;
+  /* Warna merah marun sesuai gambar */
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.service-subtitle {
+  color: #5d7539;
+  /* Warna hijau sesuai gambar */
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.service-container {
+  padding: 80px 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.service-grid {
+  display: flex;
+  gap: 100px;
+  /* Jarak antar dua pilihan layanan */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.service-icon-wrapper {
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.service-icon-wrapper:hover {
+  transform: translateY(-10px);
+}
+
+.service-icon-wrapper img {
+  width: 220px;
+  /* Ukuran icon layanan */
+  height: auto;
+}
+
+.btn-service {
+  background-color: #c05c67;
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.btn-service:hover {
+  background-color: #a84b55;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsif Mobile */
+@media (max-width: 768px) {
+  .service-header {
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .service-title {
+    font-size: 2rem;
+  }
+
+  .service-grid {
+    gap: 50px;
+  }
+}
+
+
+
+/* --- PICKUP SELECTION STYLES --- */
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.back-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #c05c67;
+  transition: 0.3s;
+}
+
+.back-link i {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.inline-title {
+  margin-bottom: 0;
+  /* Menghilangkan margin agar sejajar dengan icon */
+}
+
+.shift-right {
+  margin-left: 45px;
+  /* Menyesuaikan teks bawah agar sejajar dengan judul setelah icon */
+  margin-top: 5px;
+}
+
+.selection-container {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.selection-heading {
+  color: #5d7539;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.selection-grid {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.selection-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.placeholder-box {
+  width: 250px;
+  height: 180px;
+  background-color: #d9d9d9;
+  /* Warna abu-abu placeholder sesuai gambar */
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+
+.selection-item .btn-service {
+  min-width: 200px;
+}
+
+/* Responsif Mobile */
+@media (max-width: 768px) {
+  .shift-right {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .back-link {
+    justify-content: center;
+  }
+
+  .selection-grid {
+    gap: 40px;
+  }
+
+  .selection-heading {
+    font-size: 1.8rem;
+  }
+}
+
+/* --- PICKUP FORM STYLES --- */
+.white-bg {
+  background-color: white !important;
+}
+
+.form-container {
+  padding: 40px 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card-white {
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+}
+
+.section-title {
+  color: #5d7539;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+.grid-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.input-field.full {
+  grid-column: span 2;
+}
+
+.input-field label {
+  display: block;
+  color: #89a45e;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.input-field input {
+  width: 100%;
+  border: none;
+  border-bottom: 1.5px solid #ccc;
+  padding: 8px 0;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #666;
+}
+
+.divider {
+  margin: 40px 0;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+/* Oil Selection Styles */
+.oil-selection {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.oil-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.oil-item img {
+  margin-bottom: 15px;
+  filter: sepia(0.3);
+  /* Memberikan efek kecokelatan pada placeholder image */
+}
+
+.amount-display {
+  border-bottom: 1px solid #5d7539;
+  width: fit-content;
+  padding-bottom: 5px;
+}
+
+/* Pickup Schedule Card */
+.card-yellow-light {
+  background-color: #fdf2a5;
+  padding: 40px;
+  border-radius: 25px;
+  border: 1px solid #e5c363;
+  text-align: center;
+}
+
+.schedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.badge-type {
+  background: #f8e18e;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  border: 1px solid #d4af37;
+}
+
+.time-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.time-btn {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.time-btn.active {
+  background: #f8e18e;
+  border-color: #d4af37;
+}
+
+.earn-info {
+  color: #d48b1d;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+.btn-schedule {
+  background-color: #89a45e;
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+
+
+.calendar-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.calendar-input-wrapper i {
+  position: absolute;
+  right: 10px;
+  color: #89a45e;
+  pointer-events: none;
+}
+
+#date-picker {
+  width: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1.5px solid #ccc;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #4a4a4a;
+}
+
+/* Mengubah warna tema kalender flatpickr agar senada dengan JelanTech */
+.flatpickr-day.selected {
+  background: #89a45e !important;
+  border-color: #89a45e !important;
+}
+
+.flatpickr-calendar {
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+/* --- WEEKLY PICKUP SPECIFIC --- */
+.card-maroon {
+  background-color: #c05c67;
+  /* Warna merah marun sesuai gambar */
+  padding: 40px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.white-text {
+  color: white !important;
+}
+
+.gold-text {
+  color: #f8e18e;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.badge-type.yellow {
+  background: #f8e18e;
+  color: #5d7539;
+  border: none;
+}
+
+#day-picker {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 1.1rem;
+  padding: 5px;
+  width: 200px;
+  outline: none;
+}
+
+#day-picker option {
+  color: black;
+}
+
+.time-btn-weekly {
+  background: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #c05c67;
+}
+
+.time-btn-weekly.active {
+  background: #f8e18e;
+  color: #5d7539;
+}
+
+.btn-schedule.green {
+  background-color: #89a45e;
+  color: white;
+  margin-top: 20px;
+}
+
+
+/* Container utama dropdown */
+.custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  margin-top: 10px;
+}
+
+/* Reset tampilan default select */
+#day-picker {
+  width: 100%;
+  padding: 10px 5px;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: white;
+  background-color: transparent;
+  /* Transparan agar menyatu dengan background marun */
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+  /* Garis bawah putih transparan */
+  appearance: none;
+  /* Menghilangkan panah bawaan Windows/Chrome */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  transition: border-bottom 0.3s ease;
+}
+
+/* Efek saat dropdown diklik/fokus */
+#day-picker:focus {
+  outline: none;
+  border-bottom: 2px solid #f8e18e;
+  /* Berubah jadi kuning saat aktif */
+}
+
+/* Ikon panah kustom */
+.select-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 0.9rem;
+  pointer-events: none;
+  /* Agar klik tembus ke select di bawahnya */
+  transition: transform 0.3s ease;
+}
+
+/* Animasi panah saat select terbuka (hanya bekerja di beberapa browser) */
+#day-picker:focus+.select-icon {
+  transform: translateY(-50%) rotate(180deg);
+  color: #f8e18e;
+}
+
+/* Styling isi pilihan (Option) */
+#day-picker option {
+  background-color: #ffffff;
+  color: #333;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+
+/* --- TRACKING PAGE STYLES --- */
+.tracking-container {
+  padding: 30px 10%;
+}
+
+.tracking-card {
+  margin-bottom: 40px;
+  border: 1px solid #ddd;
+}
+
+.tracking-table,
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.tracking-table th,
+.history-table th {
+  color: #5d7539;
+  border-bottom: 2px solid #eee;
+  padding: 10px;
+}
+
+.tracking-table td,
+.history-table td {
+  padding: 15px 10px;
+  color: #666;
+}
+
+.status-otw {
+  color: #c05c67;
+  font-weight: bold;
+}
+
+.map-container {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.map-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.points-info {
+  font-style: italic;
+  color: #d48b1d;
+  font-size: 0.9rem;
+}
+
+/* History Section */
+.history-heading {
+  color: #5d7539;
+  margin-bottom: 30px;
+}
+
+.history-group {
+  margin-bottom: 50px;
+}
+
+.badge-history {
+  background-color: #89a45e;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.mini-card {
+  padding: 25px !important;
+  margin-bottom: 20px;
+}
+
+.mini-card h3 {
+  color: #4a4a4a;
+  font-size: 1.2rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.btn-edit {
+  background-color: #f8e18e;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  color: #5d7539;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background-color: #c05c67;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.view-all {
+  display: block;
+  text-align: left;
+  color: #999;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.footer-action {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.btn-check-points {
+  background-color: #c05c67;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+
+/* Container khusus untuk membungkus Peta */
+.map-wrapper {
+  margin: 20px 0;
+  padding: 0 10px;
+}
+
+.map-container-active {
+  position: relative;
+  border: 2px solid #eee;
+  border-radius: 18px;
+  overflow: hidden;
+  /* Agar iframe mengikuti radius container */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Info overlay yang melayang di atas peta */
+.map-overlay-info {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #5d7539;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.map-overlay-info i {
+  color: #c05c67;
+}
+
+/* Animasi sederhana agar status OTW berkedip */
+.status-otw {
+  color: #c05c67;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* --- PROFILE PAGE STYLES --- */
+.profile-container {
+  padding: 40px 15%;
+}
+
+.profile-card {
+  position: relative;
+  padding: 40px !important;
+  margin-bottom: 50px;
+  border-radius: 30px !important;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-title {
+  color: #5d7539;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.btn-edit-profile {
+  background-color: #c05c67;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.profile-avatar-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.avatar-circle {
+  width: 120px;
+  height: 120px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: #666;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.detail-row {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.detail-row label {
+  width: 120px;
+  color: #89a45e;
+  font-weight: 600;
+}
+
+.detail-row span {
+  color: #666;
+}
+
+/* My Points Styling */
+.points-summary-section {
+  padding: 20px 0;
+}
+
+.points-title {
+  color: #c05c67;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.points-description {
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.my-rank-container {
+  margin-bottom: 40px;
+}
+
+.points-label {
+  text-align: right;
+  color: #c05c67;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.action-center {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-claim {
+  background-color: #c05c67;
+  color: white;
+  border: none;
+  padding: 12px 50px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(192, 92, 103, 0.3);
+}
+
+.active-profile {
+  background-color: #c05c67;
+  color: white !important;
+}
+
+
+/* --- POINT BAR PROFILE STYLES --- */
+
+.points-header-label {
+  text-align: right;
+  color: #c05c67;
+  font-weight: 600;
+  margin-bottom: 5px;
+  padding-right: 10px;
+}
+
+.leaderboard-container.profile-points {
+  background-color: #5d7539;
+  /* Hijau tua sesuai gambar */
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.rank-row.user-row {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 15px;
+  gap: 15px;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #333;
+  min-width: 120px;
+}
+
+/* Container bar kosong (Putih dengan border) */
+.progress-container {
+  flex-grow: 1;
+  height: 30px;
+  background-color: #fff;
+  border: 1.5px solid #ddd;
+  border-radius: 20px;
+  position: relative;
+  overflow: visible;
+  /* Penting agar bintang bisa sedikit keluar bar */
+}
+
+/* Isi bar dengan gradasi emas */
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, #f8e18e, #d48b1d);
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Ikon Bintang di ujung bar */
+.star-icon {
+  color: #d48b1d;
+  font-size: 1.8rem;
+  position: absolute;
+  right: -10px;
+  /* Menonjol sedikit ke kanan sesuai gambar */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.user-points {
+  font-weight: 700;
+  color: #333;
+  min-width: 60px;
+  text-align: right;
+}
+
+.btn-claim {
+  background-color: #c05c67;
+  color: white;
+  border: none;
+  padding: 12px 60px;
+  border-radius: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-claim:hover {
+  background-color: #a84b55;
+  transform: scale(1.05);
+}
+
+
+
+/* --- POINTS EXCHANGE STYLES --- */
+
+/* Gaya Header */
+.exchange-title-main {
+  color: #c05c67;
+  /* Merah marun */
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.congrats-text {
+  color: #89a45e;
+  /* Hijau JelanTech */
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Gaya Kartu Penukaran */
+.exchange-container {
+  padding: 60px 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.exchange-card {
+  width: 100%;
+  max-width: 800px;
+  padding: 50px !important;
+  border-radius: 30px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.exchange-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.exchange-card-title {
+  color: #5d7539;
+  /* Hijau Tua */
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.avatar-circle-small {
+  width: 100px;
+  height: 100px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #999;
+}
+
+/* Tombol Footer */
+.action-center-exchange {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-edit-footer {
+  background-color: #c05c67;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(192, 92, 103, 0.2);
+  transition: 0.3s;
+}
+
+.btn-edit-footer:hover {
+  background-color: #a84b55;
+  transform: translateY(-2px);
+}
+
+/* Responsivitas Mobile */
+@media (max-width: 768px) {
+  .exchange-title-main {
+    font-size: 2rem;
+  }
+
+  .exchange-card-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .exchange-container {
+    padding: 40px 5%;
+  }
+}
+
+
+/* Container pembungkus untuk posisi relatif */
+.profile-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Styling Dropdown */
+.profile-dropdown {
+  position: absolute;
+  top: 55px;
+  /* Jarak dari atas navbar */
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 10px 0;
+  z-index: 1000;
+  display: none;
+  /* Sembunyikan secara default */
+  border: 1px solid #eee;
+}
+
+/* Panah kecil di atas dropdown */
+.profile-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 15px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid white;
+}
+
+/* Styling Item di dalam Dropdown */
+.profile-dropdown a {
+  color: #333;
+  padding: 12px 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.profile-dropdown a:hover {
+  background-color: #f9f9f9;
+  color: #89a45e;
+}
+
+.profile-dropdown hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 5px 0;
+}
+
+/* Warna khusus untuk Sign Out */
+.logout-item {
+  color: #c05c67 !important;
+  font-weight: 600;
+}
+
+/* Class untuk menampilkan dropdown via JS */
+.show-dropdown {
+  display: block;
+  animation: fadeInDown 0.3s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

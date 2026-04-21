@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - JelanTech</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-yellow">
+    <nav class="nav-guest">
+      <div class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="login.html" class="nav-link">Sign In</a>
+        <a href="register.html" class="nav-link active">Sign Up</a>
+      </div>
+    </nav>
+
+    <main class="login-container">
+      <div class="login-card">
+        <h1 class="register-title">
+          Create account to..........................!
+        </h1>
+
+        <form id="registerForm">
+          <div class="input-group">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email" placeholder="Email" required />
+          </div>
+
+          <div class="input-group">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" placeholder="Username" required />
+          </div>
+
+          <div class="input-group">
+            <i class="fa-regular fa-eye-slash"></i>
+            <input type="password" placeholder="Password" required />
+          </div>
+
+          <div class="login-links">
+            <p>Already Have an Account? Log in <a href="login.html">here</a></p>
+          </div>
+
+          <button type="submit" class="btn-login">Sign Up</button>
+        </form>
+
+        <div class="login-footer">
+          <h2 class="brand-name-small">JelanTech</h2>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

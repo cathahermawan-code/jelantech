@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard - JelanTech</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gradient-yellow">
+    <nav class="nav-auth">
+      <div class="nav-container">
+        <div class="nav-left">
+          <h1 class="brand-logo">JelanTech</h1>
+        </div>
+        <div class="nav-right">
+          <a href="home-auth.html" class="nav-link">Home</a>
+          <a href="leaderboard.html" class="nav-link active">Leaderboard</a>
+          <a href="service.html" class="nav-link">Our Service</a>
+           <div class="profile-wrapper">
+            <div class="profile-icon" id="profile-trigger">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="profile-dropdown" id="profile-menu">
+              <a href="profile.html"
+                ><i class="fa-solid fa-id-card"></i> My Profile</a
+              >
+              <hr />
+              <a href="login.html" class="logout-item"
+                ><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a
+              >
+            </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="leaderboard-section">
+      <header class="leaderboard-header">
+        <h1 class="title-main">Leader<span>board</span></h1>
+        <p class="description">
+          Earn points by exchanging your used cooking oil and climb the leaderboard. The higher your points, the greater the rewards you can unlock
+        </p>
+      </header>
+
+      <div class="leaderboard-card">
+        <table class="leaderboard-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th></th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rank-num">1</td>
+              <td class="user-name">Makaiyo Dela</td>
+              <td>
+                <div class="progress-container">
+                  <div class="progress-bar" style="width: 90%">
+                    <i class="fa-solid fa-star star-icon"></i>
+                  </div>
+                </div>
+              </td>
+              <td class="points-num">1150</td>
+            </tr>
+            <tr>
+              <td class="rank-num">2</td>
+              <td class="user-name">Jamal</td>
+              <td>
+                <div class="progress-container">
+                  <div class="progress-bar" style="width: 75%">
+                    <i class="fa-solid fa-star star-icon"></i>
+                  </div>
+                </div>
+              </td>
+              <td class="points-num">896</td>
+            </tr>
+            <tr>
+              <td class="rank-num">3</td>
+              <td class="user-name">Levina Riski</td>
+              <td>
+                <div class="progress-container">
+                  <div class="progress-bar" style="width: 65%">
+                    <i class="fa-solid fa-star star-icon"></i>
+                  </div>
+                </div>
+              </td>
+              <td class="points-num">802</td>
+            </tr>
+            <tr class="current-user-row">
+              <td class="rank-num">152</td>
+              <td class="user-name">You</td>
+              <td>
+                <div class="progress-container">
+                  <div class="progress-bar user-progress" style="width: 30%">
+                    <i class="fa-solid fa-star star-icon"></i>
+                  </div>
+                </div>
+              </td>
+              <td class="points-num">113</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

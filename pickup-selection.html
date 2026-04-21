@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pick-Up Selection - JelanTech</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gradient-yellow">
+    <nav class="nav-auth">
+      <div class="nav-container">
+        <div class="nav-left">
+          <h1 class="brand-logo">JelanTech</h1>
+        </div>
+        <div class="nav-right">
+          <a href="home-auth.html" class="nav-link">Home</a>
+          <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+          <a href="service.html" class="nav-link active">Our Service</a>
+          <div class="profile-wrapper">
+            <div class="profile-icon" id="profile-trigger">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="profile-dropdown" id="profile-menu">
+              <a href="profile.html"
+                ><i class="fa-solid fa-id-card"></i> My Profile</a
+              >
+              <hr />
+              <a href="login.html" class="logout-item"
+                ><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a
+              >
+            </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="service-header">
+      <div class="header-content">
+        <a href="service.html" class="back-link">
+          <i class="fa-solid fa-chevron-left"></i>
+          <h1 class="service-title inline-title">
+            Start Sending to Earn Points!
+          </h1>
+        </a>
+        <p class="service-subtitle shift-right">
+          Choose a one time pick up or set a weekly pickup.
+        </p>
+      </div>
+    </header>
+
+    <main class="selection-container">
+      <h2 class="selection-heading">Choose your choice of Pick-Up!</h2>
+
+      <div class="selection-grid">
+        <div class="selection-item">
+          <img
+              src="onetime.png"
+              alt="Pickup Progress Icon" width="200" height="200"
+            />
+          <a href="pickup-form.html"
+            ><button class="btn-service">One Time Pick-Up</button></a
+          >
+        </div>
+
+        <div class="selection-item">
+           <img
+              src="weekly.png"
+              alt="Weekly Pick-Up Icon" width="200" height="200"
+            />
+          <a href="weekly-pickup.html"
+            ><button class="btn-service">Weekly Pick-Up</button>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

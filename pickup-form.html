@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Time Pick-Up - JelanTech</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gradient-yellow">
+    <nav class="nav-auth">
+      <div class="nav-container">
+        <div class="nav-left">
+          <h1 class="brand-logo">JelanTech</h1>
+        </div>
+        <div class="nav-right">
+          <a href="home-auth.html" class="nav-link">Home</a>
+          <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+          <a href="service.html" class="nav-link active">Our Service</a>
+          <div class="profile-wrapper">
+            <div class="profile-icon" id="profile-trigger">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="profile-dropdown" id="profile-menu">
+              <a href="profile.html"
+                ><i class="fa-solid fa-id-card"></i> My Profile</a
+              >
+              <hr />
+              <a href="login.html" class="logout-item"
+                ><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a
+              >
+            </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="service-header white-bg">
+      <div class="header-content">
+        <a href="pickup-selection.html" class="back-link">
+          <i class="fa-solid fa-chevron-left"></i>
+          <h1 class="service-title inline-title">
+            Send Your <span>Used Cooking Oil</span> to the nearest Trash Bank
+          </h1>
+        </a>
+        <p class="service-subtitle shift-right">
+          Just one step closer towards helping to save the earth from waste.
+        </p>
+      </div>
+    </header>
+
+    <main class="form-container">
+      <div class="card-white">
+        <section class="form-section">
+          <h2 class="section-title">Order Details</h2>
+          <div class="grid-form">
+            <div class="input-field full">
+              <label>Full Name</label>
+              <input type="text" value="Lala Dipsy" />
+            </div>
+            <div class="input-field">
+              <label>Email</label>
+              <input type="email" value="jelantech@gmail.com" />
+            </div>
+            <div class="input-field">
+              <label>Phone Number</label>
+              <input type="text" value="08121676767" />
+            </div>
+            <div class="input-field full">
+              <label>Adress Line</label>
+              <input type="text" value="Lala Dipsy Road, Landungsari, Dau" />
+            </div>
+            <div class="input-field">
+              <label>Province/City</label>
+              <input type="text" value="Jakarta" />
+            </div>
+            <div class="input-field">
+              <label>Post Code</label>
+              <input type="text" value="12160" />
+            </div>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <section class="form-section">
+          <h2 class="section-title">Oil Details</h2>
+          <div class="oil-selection">
+            <label class="oil-item">
+              <img src="bottle1.png" alt="Bottle" width="200" height="200"/>
+              <input
+                type="radio"
+                name="oil-qty"
+                value="1000"
+                data-points="10"
+              />
+              <span> 2 Liters</span>
+            </label>
+            <label class="oil-item">
+              <img src="bottle3.png" alt="Bottle" width="200" height="200"/>
+              <input
+                type="radio"
+                name="oil-qty"
+                value="3000"
+                data-points="25"
+              />
+              <span>2-4 Liters</span>
+            </label>
+            <label class="oil-item">
+              <img src="bottle4.png" alt="Bottle" width="250" height="200"/>
+              <input
+                type="radio"
+                name="oil-qty"
+                value="6075"
+                data-points="56"
+                checked
+              />
+              <span>5-10 Liters</span>
+            </label>
+          </div>
+
+          <div class="amount-display">
+            <p>Amount : <span id="display-amount">6075 ml</span></p>
+          </div>
+        </section>
+      </div>
+
+      <div class="card-yellow-light">
+        <div class="schedule-header">
+          <h2 class="section-title">Pickup Schedule</h2>
+          <span class="badge-type">One-Time Pick Up</span>
+        </div>
+
+        <div class="schedule-grid">
+          <div class="date-select">
+            <label>Date:</label>
+            <div class="calendar-input-wrapper">
+              <input type="text" id="date-picker" placeholder="Select Date.." />
+              <i class="fa-solid fa-calendar-days"></i>
+            </div>
+          </div>
+
+          <div class="time-select">
+            <label>Time:</label>
+            <div class="time-options">
+              <button type="button" class="time-btn">8 AM</button>
+              <button type="button" class="time-btn active">10 AM</button>
+              <button type="button" class="time-btn">12 PM</button>
+              <button type="button" class="time-btn">1 PM</button>
+              <button type="button" class="time-btn">2 PM</button>
+              <button type="button" class="time-btn">5 PM</button>
+            </div>
+          </div>
+
+          <div class="earn-info">
+            <p>
+              You will earn <span id="display-points">56</span> points from this
+              order
+            </p>
+          </div>
+        </div>
+
+        <p class="schedule-summary" id="schedule-text">
+          Scheduled Pickup on Wednesday, 14 April 2026 at 10 AM
+        </p>
+        <button class="btn-schedule">Schedule Now</button>
+      </div>
+    </main>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

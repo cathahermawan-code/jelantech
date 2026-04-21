@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Points Exchange - JelanTech</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gradient-yellow">
+    <nav class="nav-auth">
+      <div class="nav-container">
+        <div class="nav-left">
+          <h1 class="brand-logo">JelanTech</h1>
+        </div>
+        <div class="nav-right">
+          <a href="home-auth.html" class="nav-link">Home</a>
+          <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+          <a href="service.html" class="nav-link">Our Service</a>
+          <div class="profile-wrapper">
+            <div class="profile-icon" id="profile-trigger">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="profile-dropdown" id="profile-menu">
+              <a href="profile.html"
+                ><i class="fa-solid fa-id-card"></i> My Profile</a
+              >
+              <hr />
+              <a href="login.html" class="logout-item"
+                ><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a
+              >
+            </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="service-header white-bg">
+      <div class="header-content">
+        <h1 class="exchange-title-main">Trade points to cash!</h1>
+        <p class="congrats-text">Congratulations! You got the reward!</p>
+      </div>
+    </header>
+
+    <main class="exchange-container">
+      <div class="card-white exchange-card">
+        <div class="exchange-card-header">
+          <h2 class="exchange-card-title">
+            Exchange points <br />
+            for cash
+          </h2>
+          <div class="avatar-circle-small">
+            <i class="fa-solid fa-user"></i>
+          </div>
+        </div>
+
+        <div class="profile-details">
+          <div class="detail-row">
+            <label>Name</label>
+            <span>jelantech</span>
+          </div>
+          <div class="detail-row">
+            <label>Username</label>
+            <span>jelantech</span>
+          </div>
+          <div class="detail-row">
+            <label>Email</label>
+            <span>jelantech@gmail.com</span>
+          </div>
+          <div class="detail-row">
+            <label>Password</label>
+            <span>**********</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-center-exchange">
+        <button
+          class="btn-edit-footer"
+          onclick="window.location.href = 'profile.html'"
+        >
+          Edit Profile
+        </button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

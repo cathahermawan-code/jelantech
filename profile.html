@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - JelanTech</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gradient-yellow">
+    <nav class="nav-auth">
+      <div class="nav-container">
+        <div class="nav-left">
+          <h1 class="brand-logo">JelanTech</h1>
+        </div>
+        <div class="nav-right">
+          <a href="home-auth.html" class="nav-link">Home</a>
+          <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+          <a href="service.html" class="nav-link">Our Service</a>
+          <div class="profile-wrapper">
+            <div class="profile-icon" id="profile-trigger">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="profile-dropdown" id="profile-menu">
+              <a href="profile.html"
+                ><i class="fa-solid fa-id-card"></i> My Profile</a
+              >
+              <hr />
+              <a href="login.html" class="logout-item"
+                ><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a
+              >
+            </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="profile-container">
+      <div class="card-white profile-card">
+        <div class="profile-header">
+          <h2 class="profile-title">Profile</h2>
+          <button class="btn-edit-profile">Edit Profile</button>
+        </div>
+
+        <div class="profile-avatar-section">
+          <div class="avatar-circle">
+            <i class="fa-solid fa-user"></i>
+          </div>
+        </div>
+
+        <div class="profile-details">
+          <div class="detail-row">
+            <label>Name</label>
+            <span>jelantech</span>
+          </div>
+          <div class="detail-row">
+            <label>Username</label>
+            <span>jelantech</span>
+          </div>
+          <div class="detail-row">
+            <label>Email</label>
+            <span>jelantech@gmail.com</span>
+          </div>
+          <div class="detail-row">
+            <label>Password</label>
+            <span>**********</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="points-summary-section">
+        <div class="points-summary-section">
+          <h2 class="points-title">My Points</h2>
+          <p class="points-description">
+            Congratulations you got the rewards!
+          </p>
+
+          <div class="points-header-label">Points</div>
+
+          <div class="leaderboard-container profile-points">
+            <div class="rank-item-wrapper">
+              <div class="rank-row user-row">
+                <span class="user-name">Makaiyo Dela</span>
+
+                <div class="progress-container">
+                  <div class="progress-fill" style="width: 75%">
+                    <i class="fa-solid fa-star star-icon"></i>
+                  </div>
+                </div>
+
+                <span class="user-points">90/100</span>
+              </div>
+            </div>
+          </div>
+          <div class="action-center">
+            <a href="point-exchange.html">
+              <button class="btn-claim">Claim Reward</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

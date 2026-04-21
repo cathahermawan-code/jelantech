@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In - JelanTech</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-yellow">
+    <nav class="nav-guest">
+      <div class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="login.html" class="nav-link active">Sign In</a>
+        <a href="register.html" class="nav-link">Sign Up</a>
+      </div>
+    </nav>
+
+    <main class="login-container">
+      <div class="login-card">
+        <h1>Welcome Back!</h1>
+
+        <form id="loginForm">
+          <div class="input-group">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" placeholder="Username" required />
+          </div>
+
+          <div class="input-group">
+            <i class="fa-regular fa-eye-slash"></i>
+            <input type="password" placeholder="Password" required />
+          </div>
+
+          <div class="remember-me">
+            <input type="checkbox" id="remember" />
+            <label for="remember">Remember Me</label>
+          </div>
+
+          <div class="login-links">
+            <p>
+              Don't Have an Account? Create one <a href="register.html">here</a>
+            </p>
+            <a href="#" class="forgot-pass">Forget Password?</a>
+          </div>
+
+          <button type="submit" class="btn-login">Login</button>
+        </form>
+
+        <div class="login-footer">
+          <h2 class="brand-name-small">JelanTech</h2>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

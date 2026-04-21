@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - JelanTech</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav-auth">
+      <div class="nav-container">
+        <div class="nav-left">
+          <h1 class="brand-logo">JelanTech</h1>
+        </div>
+        <div class="nav-right">
+          <a href="home-auth.html" class="nav-link active">Home</a>
+          <a href="leaderboard.html" class="nav-link">Leaderboard</a>
+          <a href="service.html" class="nav-link">Our Service</a>
+          <div class="profile-wrapper">
+            <div class="profile-icon" id="profile-trigger">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="profile-dropdown" id="profile-menu">
+              <a href="profile.html"
+                ><i class="fa-solid fa-id-card"></i> My Profile</a
+              >
+              <hr />
+              <a href="login.html" class="logout-item"
+                ><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-left">
+        <div class="hero-content">
+          <h2>Welcome To</h2>
+          <h1 class="brand-name-hero">JelanTech</h1>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img
+          src="logo.png"
+          alt="Mascot JelanTech"
+          class="mascot-img"
+        />
+      </div>
+    </header>
+
+    <section class="about">
+      <h2>What is <span class="highlight">JelanTech</span>?</h2>
+      <div class="about-container">
+        <p>
+          JelanTech adalah website penyetoran minyak jelantah berbasis pickup
+          yang ditujukan untuk restoran, dengan sistem penjemputan rutin setiap
+          minggu langsung dari rumah. Pengguna hanya perlu mendaftar dan
+          menyiapkan minyak jelantah, lalu petugas akan mengambilnya sesuai
+          Jadwal.
+        </p>
+        <p>
+          Setiap setoran minyak akan dikonversi menjadi poin yang dapat
+          ditukarkan dengan berbagai reward seperti voucher GoPay, OVO, pulsa,
+          dan lainnya. JelanTech hadir sebagai solusi praktis yang memberikan
+          keuntungan ekonomi sekaligus mendukung kepedulian terhadap lingkungan.
+        </p>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2 class="cta-title">Ready to send your used-oil?</h2>
+      <div class="cta-wrapper">
+        <div class="cta-text">
+          <p>
+            JelanTech adalah website penyetoran minyak jelantah berbasis pickup
+            yang ditujukan untuk restoran, dengan sistem penjemputan rutin setiap
+            minggu langsung dari restoran. Pengguna hanya perlu mendaftar dan
+            menyiapkan minyak jelantah, lalu petugas akan mengambilnya sesuai
+            jadwal.
+          </p>
+        </div>
+        <div class="cta-image">
+          <img
+            src="ready.png"
+            alt="Icon Pickup Box"
+          />
+        </div>
+      </div>
+      <button class="btn-start">Start to Send</button>
+    </section>
+
+    <div class="floating-btn">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
